@@ -9,7 +9,7 @@ Beijing Institute of Technology
 Notably, the Transformer network is used to establish the cross-modal connection between audio and landmarks effectively and generate landmarks conforming to the distribution of training data. We also explore formant features of the audio as additional conditions to guide landmark generation.
 Then, these landmarks are combined with Gaussian relative position coding to refine the sampling points on the rays, thereby constructing a dynamic neural radiation field conditioned on these landmarks and audio features for rendering the generated head.
 This decoupled setup enhances both the fidelity and flexibility of mapping audio to video with two independent small-scale networks. Additionally, it supports the generation of the torso part from the head-only image with improved StyleUnet, further enhancing the realism of the generated talking head. 
-The experimental results demonstrate that our method excels in producing lifelike talking head, and the lightweight neural network models also exhibit superior speed and learning efficiency  with less memory requirement.
+The experimental results demonstrate that our method excels in producing lifelike talking head, 和 the lightweight neural network models also exhibit superior speed and learning efficiency with less memory requirement.
 
 ## Data prepare
 
@@ -96,7 +96,7 @@ cd styleunet/networks/stylegan2_ops
 python setup.py install
 ```
 
-## Training
+## 培训
 
 ```bash
 python process_voca_data.py
@@ -112,4 +112,4 @@ python styleunet/stage.py results/?
 ```
 
 ## Acknowledgement & License
-The code is partially borrowed from [StyleAvatar](https://github.com/LizhenWangT/StyleAvatar) and [RAD-NeRF](https://github.com/ashawkey/RAD-NeRF). And many thanks to the volunteers participated in data collection. Our License can be found in [LICENSE](./LICENSE). Thanks to the authors of these open source libraries.
+The code is partially borrowed from [StyleAvatar](https://github.com/LizhenWangT/StyleAvatar)， [metrical-tracker](https://github.com/Zielon/metrical-tracker) 和 [RAD-NeRF](https://github.com/ashawkey/RAD-NeRF). And many thanks to the volunteers participated in data collection. Our License can be found in [LICENSE](./LICENSE). Thanks to the authors of these open source libraries.
