@@ -89,6 +89,12 @@ conda install qudida=0.0.4 opencv=4.9.0=headless_py310h18fe71b_15 onnxruntime=1.
 
 pip install chumpy==0.70 lpips sounddevice==0.4.7 dearpygui albumentations==1.3.1 face-alignment insightface==0.7.2 mediapipe==0.10.10 --no-deps
 ```
+### Get glm
+```bash
+wget https://github.com/g-truc/glm/releases/download/1.0.1/glm-1.0.1-light.zip
+unzip glm-1.0.1-light.zip -d gsencoder/glm
+rm glm-1.0.1-light.zip
+```
 
 ### Build styleunet
 ```bash
@@ -96,7 +102,7 @@ cd styleunet/networks/stylegan2_ops
 python setup.py install
 ```
 
-## 培训
+## Traing
 
 ```bash
 python process_voca_data.py
@@ -112,4 +118,4 @@ python styleunet/stage.py results/?
 ```
 
 ## Acknowledgement & License
-The code is partially borrowed from [StyleAvatar](https://github.com/LizhenWangT/StyleAvatar)， [metrical-tracker](https://github.com/Zielon/metrical-tracker) 和 [RAD-NeRF](https://github.com/ashawkey/RAD-NeRF). And many thanks to the volunteers participated in data collection. Our License can be found in [LICENSE](./LICENSE). Thanks to the authors of these open source libraries.
+The code is partially borrowed from [StyleAvatar](https://github.com/LizhenWangT/StyleAvatar), [metrical-tracker](https://github.com/Zielon/metrical-tracker) and [RAD-NeRF](https://github.com/ashawkey/RAD-NeRF). And many thanks to the volunteers participated in data collection. Our License can be found in [LICENSE](./LICENSE). Thanks to the authors of these open source libraries.
