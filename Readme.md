@@ -81,7 +81,7 @@ or install by yourself:
 ```bash
 # note to install python < 3.11
 conda install numpy=1.23 numba scikit-image scikit-learn tqdm matplotlib tensorboard ninja rich cython onnx prettytable==3.5.0 loguru fsspec attrs onnxruntime==1.17.1 -y
-conda install pytorch==2.2.2 torchvision==0.17.2 torchaudio==2.2.2 pytorch-cuda=12.1 -c pytorch -c nvidia -y
+conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.6 -c pytorch -c nvidia -y
 conda install iopath fvcore pytorch3d librosa torch-ema trimesh einops imageio-ffmpeg easydict -c conda-forge -c pytorch3d -y
 
 # conda search onnxruntime=1.17.1=*cuda opencv=4.9.0=headless* -c conda-forge
@@ -89,6 +89,8 @@ conda install qudida=0.0.4 opencv=4.9.0=headless_py310h18fe71b_15 onnxruntime=1.
 # or pip install qudida==0.0.4 opencv-contrib-python-headless==4.9.0.80 onnxruntime-gpu==1.17.1 --no-deps
 
 pip install chumpy==0.70 lpips sounddevice==0.4.7 dearpygui albumentations==1.3.1 face-alignment insightface==0.7.2 mediapipe==0.10.10 --no-deps
+conda uninstall ffmpeg --force
+sudo apt-get install ffmpeg
 ```
 ### Get glm
 ```bash
