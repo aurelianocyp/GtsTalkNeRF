@@ -109,7 +109,7 @@ def pair_data(data, seq_len):
         else:
             print(f"data {name} is too short. {wav.shape}, {lms.shape}")
     # return torch.utils.data.StackDataset(*(newdata.values()))
-    return torch.utils.data.StackDataset(**newdata)
+    return util.StackDataset(**newdata)
 
 
 def train(args):

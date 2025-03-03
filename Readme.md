@@ -1,5 +1,6 @@
 # GtsTalkNeRF
 **Decoupled Two-Stage Talking Head Generation via Gaussian-Landmark-Based Neural Radiance Fields**
+
 [Boyao Ma](boyaoma@bit.edu.cn), Yuanping Cao, Lei Zhang
 
 Beijing Institute of Technology

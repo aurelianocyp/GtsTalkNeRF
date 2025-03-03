@@ -100,7 +100,7 @@ def pair_data(data, seq_len, is_train=True):
         if (last_wav_num // 80 - 1) // 8 >= seq_len // 4:
             dataset['lms'] += [lms[len_data * seq_len:]]
 
-    return torch.utils.data.StackDataset(**dataset)
+    return util.StackDataset(**dataset)
 
 
 def train(args):
