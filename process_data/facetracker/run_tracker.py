@@ -567,8 +567,8 @@ class Tracker(object):
                 losses['reg/pp'] = torch.sum(pp ** 2)
 
                 if reg_from_prev:
-                    losses['reg/t_prev'] = torch.square(t - self.prev_t).sum() * 1000
-                    losses['reg/rot_prev'] = torch.square(R - self.prev_R).sum() * 1000
+                    losses['reg/t_prev'] = torch.square(t - self.prev_t).sum() * 3000
+                    losses['reg/rot_prev'] = torch.square(R - self.prev_R).sum() * 3000
                     losses['reg/t0'] = torch.square(t - self.t0).sum() * 10
                     losses['reg/rot0'] = torch.square(R - self.R0).sum() * 10
                     losses['reg/exp_prev'] = torch.square(exp - self.prev_exp).sum() * 0.1
@@ -704,7 +704,7 @@ class Tracker(object):
         h, w = images.shape[2:4]
         pyramid_size = np.array([h, w])
         pyramid = trackutil.get_gaussian_pyramid([(pyramid_size * size, trackutil.round_up_to_odd(steps)) for size, steps in self.pyr_levels], images, self.kernel_size, self.sigma)
-        self.optimize_color(batch, pyramid[-1:], self.clone_params_tracking, lambda k: self.config.w_pho, reg_from_prev=True)
+        self.optimize_color(batch, pyramid[-2:], self.clone_params_tracking, lambda k: self.config.w_pho, reg_from_prev=True)
         self.checkpoint(batch, visualizations=[[View.GROUND_TRUTH, View.COLOR_OVERLAY, View.LANDMARKS, View.SHAPE]])
 
     def optimize_video(self):
