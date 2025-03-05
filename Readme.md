@@ -75,6 +75,8 @@ Using the environment definition file:
 ```bash
 # cuda >= 12.1, cudnn >= 9.2.1
 conda env create -f environment.yml
+conda activate GtsTalkNeRF
+
 pip install chumpy==0.70 lpips sounddevice==0.4.7 dearpygui albumentations==1.3.1 face-alignment insightface==0.7.2 mediapipe==0.10.10 --no-deps
 ```
 or install by yourself:
