@@ -115,7 +115,7 @@ python stage1_pretrain.py --train --test
 cd process_data
 python process.py -f video_long.mp4
 cd ..
-python stage1_finetune.py --train --test -w results/video_long.mp4
+python stage1_finetune.py --train --test -w results/video_long
 python main.py results/?/ --workspace results/video_long.mp4/logs/stage2 -O --iters 50000
 python main.py results/?/ --workspace results/video_long.mp4/logs/stage2 -O --iters 20000 --finetune_eyes
 python main.py results/?/ --workspace results/video_long.mp4/logs/stage2 -O --iters 40000 --finetune_lips
