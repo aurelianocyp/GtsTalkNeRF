@@ -116,10 +116,10 @@ cd process_data
 python process.py -f video_long.mp4
 cd ..
 python stage1_finetune.py --train --test -w results/video_long
-python main.py results/?/ --workspace results/video_long.mp4/logs/stage2 -O --iters 50000
-python main.py results/?/ --workspace results/video_long.mp4/logs/stage2 -O --iters 20000 --finetune_eyes
-python main.py results/?/ --workspace results/video_long.mp4/logs/stage2 -O --iters 40000 --finetune_lips
-python styleunet/stage.py results/video_long.mp4
+python main.py results/video_long/ --workspace results/video_long/logs/stage2 -O --iters 50000
+python main.py results/video_long/ --workspace results/video_long/logs/stage2 -O --iters 20000 --finetune_eyes
+python main.py results/video_long/ --workspace results/video_long/logs/stage2 -O --iters 40000 --finetune_lips
+python styleunet/stage.py results/video_long
 ```
 
 ## Acknowledgement & License
